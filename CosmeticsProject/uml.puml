@@ -1,0 +1,150 @@
+@startuml
+interface main.java.data.DataStorage {
+~ void saveProducts(List<CosmeticProduct>)
+~ void saveSales(List<Sale>)
+~ void save(List<CosmeticProduct>,List<Sale>)
+~ List<CosmeticProduct> loadProducts()
+~ List<Sale> loadSales()
+~ LoadedData load()
+}
+
+class main.java.data.DataStorage$LoadedData {
++ List<CosmeticProduct> products
++ List<Sale> sales
+}
+
+class main.java.exceptions.NegativeValueException {
+}
+class main.java.exceptions.EmptyFieldException {
+}
+class main.java.exceptions.QuantityExceededException {
+}
+class main.java.model.Product {
+- int id
+- String name
+- double price
+- int quantity
++ int getId()
++ String getName()
++ void setName(String)
++ void setPrice(double)
++ double getPrice()
++ int getQuantity()
++ void setQuantity(int)
++ void decreaseQuantity(int)
++ String getDescription()
++ String toString()
+}
+
+
+interface main.java.model.Sellable {
+~ double getPrice()
+}
+
+class main.java.model.CosmeticProduct {
+- String brand
+- String category
++ String getBrand()
++ void setBrand(String)
++ String getCategory()
++ void setCategory(String)
++ String getDescription()
++ String toString()
+}
+
+
+class main.java.model.Sale {
+- CosmeticProduct product
+- int quantitySold
+- LocalDateTime dateTime
++ double getTotal()
++ CosmeticProduct getProduct()
++ int getQuantitySold()
++ LocalDateTime getDateTime()
++ String toString()
+}
+
+
+class main.java.exceptions.ProductNotFoundException {
+}
+class main.java.data.JsonDataStorage {
+- {static} Logger log
+- String productsFilePath
+- String salesFilePath
+- Gson gson
++ void saveProducts(List<CosmeticProduct>)
++ void saveSales(List<Sale>)
++ void save(List<CosmeticProduct>,List<Sale>)
++ List<CosmeticProduct> loadProducts()
++ List<Sale> loadSales()
++ LoadedData load()
+}
+
+
+class main.java.exceptions.InvalidFormatException {
+}
+class main.java.service.StoreService {
+- DataStorage storage
+- List<CosmeticProduct> products
+- List<Sale> sales
+- int nextId
++ List<CosmeticProduct> getAllProducts()
++ void addProductAutoId(String,double,int,String,String)
++ String updateProduct(CosmeticProduct,String,double,int)
++ String deleteProduct(CosmeticProduct)
++ String sellProduct(CosmeticProduct,int)
++ String showTotalRevenue()
++ void saveData()
++ List<Sale> getAllSales()
++ String refundSale(Sale)
++ CosmeticProduct findProductById(int)
+}
+
+
+class main.java.ui.StoreApp {
+- {static} Logger log
+- TableView<CosmeticProduct> tableView
+- TableView<Sale> salesTable
+- Label revenueLabel
+- VBox revenueByCategoryBox
+- VBox countByCategoryBox
+- StoreService storeService
+- {static} String PRODUCTS_FILE_PATH
+- {static} String SALES_FILE_PATH
+- {static} String[] CATEGORIES
+- List<Sale> allSalesList
++ void start(Stage)
+- VBox createProductsTab()
+- VBox createSalesTab()
+- void openRefundDialog(Sale)
+- VBox createRevenueTab()
+- void refreshRevenueTab()
+- void openAddDialog()
+- void openUpdateDialog(CosmeticProduct)
+- void openSellDialog(CosmeticProduct)
+- void openChartsWindow()
+- void safeSetField(Object,String,String)
+- void refreshProductsTable()
+- void refreshSalesTable()
+- void info(String)
+- boolean confirm(String,String)
+- Button styledButton(String,String)
++ void stop()
++ {static} void main(String[])
+}
+
+
+
+
+main.java.data.DataStorage +.. main.java.data.DataStorage$LoadedData
+main.java.exceptions.RuntimeException <|-- main.java.exceptions.NegativeValueException
+main.java.exceptions.RuntimeException <|-- main.java.exceptions.EmptyFieldException
+main.java.exceptions.RuntimeException <|-- main.java.exceptions.QuantityExceededException
+main.java.model.Sellable <|.. main.java.model.Product
+main.java.model.Sellable <|.. main.java.model.CosmeticProduct
+main.java.model.Product <|-- main.java.model.CosmeticProduct
+main.java.exceptions.Exception <|-- main.java.exceptions.ProductNotFoundException
+main.java.data.DataStorage <|.. main.java.data.JsonDataStorage
+main.java.exceptions.RuntimeException <|-- main.java.exceptions.InvalidFormatException
+javafx.application.Application <|-- main.java.ui.StoreApp
+@enduml

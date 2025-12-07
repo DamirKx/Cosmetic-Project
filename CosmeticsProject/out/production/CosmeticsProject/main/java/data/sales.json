@@ -1,0 +1,158 @@
+[
+  {
+    "product": {
+      "brand": "сплат",
+      "category": "Гигиена",
+      "id": 3,
+      "name": "зубная паста",
+      "price": 1500.0,
+      "quantity": 99
+    },
+    "quantitySold": 1,
+    "dateTime": "2025-12-02T21:37:47.305723900"
+  },
+  {
+    "product": {
+      "brand": "хэд анд шолдерс",
+      "category": "Волосы",
+      "id": 2,
+      "name": "Шампунь для волос",
+      "price": 4000.0,
+      "quantity": 18
+    },
+    "quantitySold": 2,
+    "dateTime": "2025-12-02T21:37:56.957226500"
+  },
+  {
+    "product": {
+      "brand": "Бренд А",
+      "category": "Уход",
+      "id": 1,
+      "name": "Крем для рук",
+      "price": 1000.0,
+      "quantity": 90
+    },
+    "quantitySold": 10,
+    "dateTime": "2025-12-02T21:38:00.806760600"
+  },
+  {
+    "product": {
+      "brand": "Бренд А",
+      "category": "Маникюр",
+      "id": 5,
+      "name": "Лак для ногтей",
+      "price": 1390.0,
+      "quantity": 31
+    },
+    "quantitySold": 5,
+    "dateTime": "2025-12-02T21:41:08.232402900"
+  },
+  {
+    "product": {
+      "brand": "диор",
+      "category": "Парфюмерия",
+      "id": 8,
+      "name": "саваж",
+      "price": 50000.0,
+      "quantity": 4
+    },
+    "quantitySold": 1,
+    "dateTime": "2025-12-02T21:43:14.443816100"
+  },
+  {
+    "product": {
+      "brand": "незнаю",
+      "category": "Маникюр",
+      "id": 6,
+      "name": "Средство для снятия маникюра",
+      "price": 1500.0,
+      "quantity": 46
+    },
+    "quantitySold": 3,
+    "dateTime": "2025-12-03T17:19:58.692970"
+  },
+  {
+    "product": {
+      "brand": "незнаю",
+      "category": "Маникюр",
+      "id": 6,
+      "name": "Средство для снятия маникюра",
+      "price": 1500.0,
+      "quantity": 46
+    },
+    "quantitySold": 1,
+    "dateTime": "2025-12-03T17:21:28.448681700"
+  },
+  {
+    "product": {
+      "brand": "Бренд А",
+      "category": "Уход",
+      "id": 1,
+      "name": "Крем для рук",
+      "price": 1000.0,
+      "quantity": 88
+    },
+    "quantitySold": 2,
+    "dateTime": "2025-12-03T17:22:01.283054900"
+  },
+  {
+    "product": {
+      "brand": "корейская",
+      "category": "Уход",
+      "id": 7,
+      "name": "Маска для лица",
+      "price": 500.0,
+      "quantity": 95
+    },
+    "quantitySold": 4,
+    "dateTime": "2025-12-03T17:22:13.406767700"
+  },
+  {
+    "product": {
+      "brand": "палмолив",
+      "category": "Парфюмерия",
+      "id": 6,
+      "name": "Средство для снятия маникюра 2",
+      "price": 1500.0,
+      "quantity": 47
+    },
+    "quantitySold": 1,
+    "dateTime": "2025-12-03T18:09:28.314003400"
+  },
+  {
+    "product": {
+      "brand": "палмолив",
+      "category": "Парфюмерия",
+      "id": 6,
+      "name": "Средство для снятия маникюра 2",
+      "price": 1500.0,
+      "quantity": 47
+    },
+    "quantitySold": 2,
+    "dateTime": "2025-12-03T18:09:35.090395300"
+  },
+  {
+    "product": {
+      "brand": "сплат",
+      "category": "Гигиена",
+      "id": 3,
+      "name": "зубная паста",
+      "price": 1500.0,
+      "quantity": 89
+    },
+    "quantitySold": 10,
+    "dateTime": "2025-12-03T18:10:03.277655200"
+  },
+  {
+    "product": {
+      "brand": "Бренд А",
+      "category": "Уход",
+      "id": 1,
+      "name": "Крем для рук",
+      "price": 1000.0,
+      "quantity": 58
+    },
+    "quantitySold": 30,
+    "dateTime": "2025-12-06T18:15:36.090572800"
+  }
+]
