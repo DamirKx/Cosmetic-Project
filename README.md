@@ -132,6 +132,7 @@ java --module-path /path/to/javafx/lib --add-modules javafx.controls,javafx.fxml
 
 ## Автор
 
+Сәлімжан Дамир ТИИ34
 Учебный проект по дисциплине ООП / Java-разработка.
 
 ## Лицензия
